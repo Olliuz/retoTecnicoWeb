@@ -1,0 +1,14 @@
+CONCLUSIONES Y HALLAZGOS TÉCNICOS - PRUEBA E2E DEMOBLAZE
+
+1. Arquitectura y Patrón de Diseño:
+Se implementó el patrón de diseño Screenplay con Serenity BDD. A diferencia de Page Object Model (POM), Screenplay aplica los principios SOLID, permitiendo que las tareas y los elementos de interfaz  sean altamente reutilizables, legibles y fáciles de mantener a largo plazo.
+
+2. Manejo de Sincronización (SPA):
+Al ser Demoblaze una Single Page Application (SPA), se identificó que el manejo de esperas es crítico. Se utilizaron las esperas implícitas y explícitas nativas de Serenity para asegurar que los elementos del carrito y el formulario de compra estuvieran presentes antes de la interacción.
+
+3. Gestión de Alertas de JavaScript:
+Un hallazgo clave fue que el flujo de "Add to Cart" dispara alertas nativas del navegador (Pop-ups de JS). Se implementó una lógica de manejo de alertas  para garantizar que el flujo no se interrumpiera y el actor pudiera continuar con el siguiente producto.
+
+4. Reportabilidad y Trazabilidad:
+Gracias a la integración de Serenity BDD con Cucumber, se genera una "Documentación Viva". Esto permite que tanto perfiles técnicos como interesados de negocio (Stakeholders) comprendan el paso a paso del flujo de compra y el resultado de cada aserción mediante capturas de pantalla automáticas.
+
